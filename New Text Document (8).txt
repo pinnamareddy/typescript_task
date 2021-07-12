@@ -1,0 +1,39 @@
+class Circle {
+    radius:number = 1.0;
+    color:string = 'red';
+
+    constructor(radius?:number,color?:string){
+        if(radius !== undefined)
+        this.radius=radius;
+        if(color !== undefined)
+        this.color=color;
+    }
+
+    getRadius():number{
+        return this.radius;
+    }
+
+    setRadius(x:number){
+        this.radius=x;
+    }
+
+    getColor():string{
+        return this.color;
+    }
+
+    setColor(x:string){
+        this.color=x;
+    }
+
+    toString():string{
+        return `Circle[radius=${this.radius},color=${this.color}]`;
+    }
+    
+    getArea():number{
+        return this.radius * this.radius * 22 / 7;
+    }
+
+    getCircumference():number{
+        return 2 * this.radius * 22 / 7;
+    }
+}
